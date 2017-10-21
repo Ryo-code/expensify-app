@@ -8,6 +8,11 @@
   width: 100%;
   margin-bottom: $m-size;
   padding: 2.4rem;
+
+}
+
+.big-button:hover{
+  background: darken($purple, 3%)
 }
 
 .big-button:disabled {
@@ -21,6 +26,9 @@
   border-bottom: .3rem solid darken($purple, 10%);
   font-weight: 500;
   padding: $s-size;
+}
+.button:hover{
+  background: darken($purple, 3%)
 }
 
 .button--link {
