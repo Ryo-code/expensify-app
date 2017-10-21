@@ -6,16 +6,17 @@ export default class AddOption extends Component {
   };
 
   handleAddOption = (e) => {
+    console.log("E!", e)
+    console.log("target!", e.target)
+    console.log("elements!", e.target.elements)
     e.preventDefault(); //stops a full-page refresh
-    const inputtedOption = e.target.elements.optionAdd.value.trim();
-    const error = this.props.handleAddOption(inputtedOption);
+    const option = e.target.elements.addOption.value.trim();
+    const error = this.props.handleAddOption(option);
 
-    this.setState(() => ({ error }))
-    // this.setState(() => {
-    //   return { error }; //Same as "error: error"
-    // });
+    this.setState(() => ({ error }));
+    
     if (!error) {
-      e.target.elements.option.value = "" //clears the input box
+      e.target.elements.addOption.value = ""; //clears the input box
     }
   };
 
@@ -24,7 +25,7 @@ export default class AddOption extends Component {
       <div>
         {this.state.error && <p className="add-option-error">{this.state.error}</p>}
         <form className="add-option" onSubmit={this.handleAddOption}>
-          <input className="add-option__input" type="text" name="optionAdd"/>
+          <input className="add-option__input" type="text" name="addOption"/>
           <button className="button">Add Option</button>
         </form>
       </div>
