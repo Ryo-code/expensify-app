@@ -1,2 +1,10 @@
-@import "./base/base"; //don't write the underscore for partials
+@import "./base/settings"; //don't write the underscore for partials
+@import "./base/base"; //since base uses variables defined in settings... the order of imports matters!
+@import "./components/add-option"; //otherwise, you can make it alphabetical order
+@import "./components/button";
+@import "./components/container";
 @import "./components/header";
+@import "./components/option";
+@import "./components/widget";
+
+//Check out cool HSL functions!: http://sass-lang.com/documentation/Sass/Script/Functions.html
