@@ -25,6 +25,7 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, "public")
+    contentBase: path.join(__dirname, "public"),
+    historyApiFallback: true //this tells the dev server that we'll handle routing via our client-side code. In other words, when you get a 404 error, serve up index.html
   }
 };
