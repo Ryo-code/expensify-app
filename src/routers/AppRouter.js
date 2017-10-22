@@ -11,15 +11,16 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
+      {/* Switch checks the path and goes one-by-one to see if there's a match, and renders only that page if it matches the route */}
       <Switch>
         <Route path="/" component={ExpenseDashboardPage} exact={true} />
         <Route path="/create" component={AddExpensePage} />
-        <Route path="/edit" component={EditExpensePage} />
+        <Route path="/edit/:id" component={EditExpensePage} />
         <Route path="/help" component={HelpPage} />
         <Route component={NotFoundPage} />
+        {/* Components in Route tags will receive props from react-router-dom  */}
       </Switch>
     </div>
-  {/* Switch checks the path and goes one-by-one to see if there's a match, and renders only that page if it matches the route */}
   </BrowserRouter>
 );
 

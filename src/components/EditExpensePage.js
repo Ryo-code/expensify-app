@@ -1,11 +1,11 @@
 import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
 import React from 'react';
 
-
-const EditExpensePage = () => {
+const EditExpensePage = (props) => {
+  console.log("props!", props);
   return (
     <div>
-      this is from my Edit Expense component...
+      Editing the expense with the id of {props.match.params.id} 
     </div>
   )
 };

@@ -8,7 +8,6 @@ const Header = () => {
       {/* activeClassName only applies when the user is on that page */}
       <NavLink to="/" activeClassName="is-active" exact>Dashboard</NavLink>
       <NavLink to="/create" activeClassName="is-active">Create Expense</NavLink>
-      <NavLink to="/edit" activeClassName="is-active">Edit Expense</NavLink>
       <NavLink to="/help" activeClassName="is-active">Help</NavLink>
     </header>
   )
