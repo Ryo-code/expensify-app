@@ -2,7 +2,7 @@ const path = require('path'); //Node's PATH module, which joins two paths togeth
 // console.log(path.join(__dirname, "public"), "<- Gives the relative path we want, up until & including public");
 
 module.exports = {
-  entry: './src/playground/redux-expensify.js',
+  entry: './src/app.js',
   output: {
     path: path.join(__dirname, "public"),
     filename: 'bundle.js'

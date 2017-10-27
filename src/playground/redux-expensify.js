@@ -34,12 +34,12 @@ const editExpense = ( id, updates ) => ({
   updates
 });
 
+
 // SET_TEXT_FILTER
 const setTextFilter = (text = "") => ({
   type: 'SET_TEXT_FILTER',
   text
 });
-
 
 //SORT_BY_AMOUNT
 const sortByAmount = () => ({
@@ -60,10 +60,10 @@ const setStartDate = (startDate) => ({
 
 
 //SET_END_DATE
-  const setEndDate = (endDate) => ({
-    type: 'SET_END_DATE',
-    endDate
-  })
+const setEndDate = (endDate) => ({
+  type: 'SET_END_DATE',
+  endDate
+})
 
 
 // Expenses reducer
@@ -135,11 +135,6 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
   }
 }
 
-
-//Timestamps (positive or negative values)
-
-
-
 /********* Get Visible Expenses *********/
 const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
   return expenses.filter((expense) => {
@@ -157,7 +152,6 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
     }
   });
 };
-
 
 /************ Store Creation ************/
 const store = createStore(
