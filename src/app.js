@@ -13,26 +13,21 @@ import getVisibleExpenses from "./selectors/expenses";
 
 const store = configureStore();
 
-//addExpense -> water bill
-//addExpense -> gas bill
-store.dispatch(addExpense({ description: "water bill"}));
-store.dispatch(addExpense({ description: "gas bill"}));
-store.dispatch(addExpense({ description: "business dinner"}));
+store.dispatch(addExpense({ description: "water bill", amount: 4500 }));
+store.dispatch(addExpense({ description: "gas bill", createdAt: 1000 }));
+store.dispatch(addExpense({ description: "business dinner", createdAt: 2000}));
+store.dispatch(addExpense({ description: "Rent", amount: 109500 }));
 
-//setTextFilter -> bill (2 items) -> water (1 item)
-//getVisibleExpenses -> print visible ones to the screen
-store.dispatch(setTextFilter("bill"));
-
-setTimeout(() => {
-  store.dispatch(setTextFilter('rent'));
-}, 3000)
+// setTimeout(() => {
+//   store.dispatch(setTextFilter('bill'));
+// }, 3000)
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
-console.log(visibleExpenses);
+// console.log(visibleExpenses);
 
-console.log(store.getState());
+console.log("store.getState()", store.getState());
 
 const jsx = (
   <Provider store={store}>
