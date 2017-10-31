@@ -1,10 +1,11 @@
-import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
 import React from 'react';
+import ExpenseForm from "./ExpenseForm";
 
 const AddExpensePage = () => {
   return (
     <div>
-      this is from my Add Expense component...
+      <h1>Add Expense</h1>
+      <ExpenseForm />
     </div>
   )
 };
