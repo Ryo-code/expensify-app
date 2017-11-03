@@ -19,3 +19,11 @@ button:disabled {
 .is-active {
   font-weight: bold;
 }
+
+.error-message {
+  background: pink;
+  color: red;
+  text-decoration: italic;
+  padding: 5px;
+  // margin-left: 2rem;
+}
