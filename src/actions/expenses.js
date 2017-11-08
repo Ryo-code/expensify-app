@@ -1,12 +1,12 @@
 import uuid from 'uuid';
 
 // ADD_EXPENSE
-export const addExpense = ( 
+export const addExpense = (
   {                   //...the user inputs these four things
     description = '', //(and they all have default values)
-    note = '', 
-    amount = 0, 
-    createdAt = 0 
+    note = '',
+    amount = 0,
+    createdAt = 0
   } = {}              //...if the user didn't input them, default to empty object
 ) => ({
   type: 'ADD_EXPENSE',
@@ -31,4 +31,3 @@ export const editExpense = ( id, updates ) => ({
   id,
   updates
 });
-
